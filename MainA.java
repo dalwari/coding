@@ -83,6 +83,7 @@ public class MainA {
             }catch(Exception e){
                 e.printStackTrace();
             }
+            threads.clear();
         }
     }
     public static int[][] getMatrixInput() {
