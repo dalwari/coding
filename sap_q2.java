@@ -28,6 +28,15 @@ class Sol {
         }
 
         System.out.println("r-> "+(r>0?1:0));
+        /*****************************************************/
+        /*********************USING STREAM API*******************/
+        /*****************************************************/
+         int n=4;
+        boolean r = IntStream.rangeClosed(1, n)
+                        .anyMatch(x->(x+Integer.bitCount(x)==n));
+
+        System.out.println(r+" bleak num");
+        /*****************************************************/
     }
 
 }
