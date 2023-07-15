@@ -28,6 +28,16 @@ class Sol {
 
         System.out.println("-> "+sb.toString().substring(0,sb.length()-1));
         //System.out.println("-> "+alist);
+/**********************************************************************************/
+/***************************USING STREAMS API**********************************/
+/**********************************************************************************/
+         String str="i.love.coding.very.much";
+        List<String> list=Arrays.asList(str.split("\\."));
+        Collections.reverse(list);
+        String s=list.stream().collect(Collectors.joining("."));// print(s)--sol (1)
+        Arrays.stream(str.split("\\.")).reduce((s1,s2)->s2+"."+s1)
+        .ifPresent(System.out::println);//-- sol (2)
+/**********************************************************************************/
     }
 
 }
